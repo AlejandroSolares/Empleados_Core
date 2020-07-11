@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Empleados_core_CRUD.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -30,8 +32,14 @@ namespace Empleados_core_CRUD
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+
+            /* Inyeccion de dependencia: Servicio
+             * !Josue Alejandro Solares - 10/01/2020    
+             */
+            services.AddDbContext<Empleados_Context>(options => 
+            options.UseSqlServer(Configuration.GetConnectionString("Dev")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
