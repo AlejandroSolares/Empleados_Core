@@ -39,7 +39,7 @@ namespace Empleados_core_CRUD
              * !Josue Alejandro Solares - 10/01/2020    
              */
             services.AddDbContext<Empleados_Context>(options => 
-            options.UseSqlServer(Configuration.GetConnectionString("Dev")));
+            options.UseSqlServer("Server=(local)\\sqlexpress;Database=EmpleadoDB;Trusted_Connection=True;MultipleActiveResultSets=True"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

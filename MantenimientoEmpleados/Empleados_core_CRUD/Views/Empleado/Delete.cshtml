@@ -1,0 +1,51 @@
+﻿@model Empleados_core_CRUD.Models.Empleado
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado_Cod)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleado_Cod)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado_Nomvre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleado_Nomvre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado_Apellido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleado_Apellido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado_Correo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleado_Correo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado_Departamento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleado_Departamento)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Empleado_ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

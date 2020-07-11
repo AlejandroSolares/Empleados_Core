@@ -1,0 +1,48 @@
+﻿@model Empleados_core_CRUD.Models.Empleado
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado_Cod)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleado_Cod)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado_Nomvre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleado_Nomvre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado_Apellido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleado_Apellido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado_Correo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleado_Correo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado_Departamento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleado_Departamento)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Empleado_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
